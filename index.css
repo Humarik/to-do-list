@@ -9,6 +9,73 @@ body{
     font-size: 17px;
 }
 
+.wrapper-left{
+    position: fixed;
+    width: 0px;
+    transition: 0.5s;
+}
+
+.show-form{
+    position: absolute;
+    right: -65px;
+    width: 60px;
+    height: 34px;
+    border-radius: 4px;
+    border: 1px solid silver;
+    cursor: pointer;
+    background: #B5C7D3;
+}
+
+.form-wrapper{
+    min-width: 300px;
+    height: 100%;
+    background: white;
+    border: 0.4px solid silver;
+    border-radius: 1px;
+    margin-left: 10px;
+    padding: 5px;
+    text-align: center;
+    transform: translateX(-110%);
+    transition: 0.5s;
+}
+
+.open{
+   transform: translateX(0%); 
+}
+
+.form{
+    position: relative;
+}
+
+.input-form{
+    text-align: center;
+    margin-top: 10px;
+}
+
+#file{
+    margin-top: 15px;
+}
+
+#input-name{
+    margin-top: 40px;
+}
+
+.img{
+    position: absolute;
+    top: 0px;
+    left: 43%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-name{
+    position: absolute;
+    top: 0;
+    right: 20%;
+}
+
 #form_wrapper{
     width: 1000px;
     height: 50px;
@@ -48,21 +115,33 @@ body{
     line-height: 50px;
 }
 
+#title{
+    position: absolute;
+    float: left;
+    bottom: 0;
+    margin-bottom: 8px;
+    margin-left: 15px;
+    border-bottom: 1px solid #B5C7D3;
+    height: 35px;
+    text-align: left;
+}
+
 #task{
     width: 300px;
     height: 30px;
     line-height: 30px;
     text-align: center;
-    border: 1px solid silver;
+    border: 1px solid #B5C7D3;
     border-radius: 5px;
 }
 
 #add{
     width: 60px;
-    height: 35px;
-    border-radius: 5px;
+    height: 34px;
+    border-radius: 4px;
     border: 1px solid silver;
     cursor: pointer;
+    background: #B5C7D3;
 }
 
 #close{
@@ -74,11 +153,15 @@ body{
     border: 1px solid silver;
     border-radius: 1px;
     cursor: pointer;
+    background: #B5C7D3;
 }
+
 .checkbox-inisde{
     float: left;
 }
+
 #popus{
+    transition: all 2s ease-out;
     text-align: center;
     position: fixed;
     width: 1000px;
@@ -108,6 +191,7 @@ body{
     width: 49%;
     text-decoration: line-through;
 }
+
 .container_first{
     float: left;
     width: 49%;
@@ -118,16 +202,21 @@ body{
     height: 30px;
     line-height: 30px;
     text-align: center;
-    border: 1px solid silver;
-    border-radius: 5px;
+    border: 1px solid #B5C7D3;
+    border-radius: 4px;
 }
 
 #button{
     width: 60px;
-    height: 35px;
-    border-radius: 5px;
+    height: 34px;
+    border-radius: 4px;
     border: 1px solid silver;
     cursor: pointer;
+    background: #B5C7D3;
+}
+
+#button:hover{
+    background: #B5C7D3;
 }
 
 #container{
@@ -142,30 +231,112 @@ body{
     box-sizing: border-box;
 }
 
-
-/* .div-wrapper{
-    position: absolute;
-    width: 80%;
-    height: 50px;
-    border-top: 1px solid silver;
-    border-bottom: 1px solid silver;
-    border-radius: 1px;
-    padding: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    box-sizing: border-box;
-} */
-
 .delete-button{
+    position: absolute;
     float: right;
-    border: 0.5px solid silver;
+    top: 0;
+    right: 0;
+    margin-top: 13px;
+    margin-right: 15px; 
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    width: 26px;
+    float: right;
+    border: 1px solid silver;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.delete-button:hover{
+    box-shadow: 1px 0 1px;
+}
+
+.edit-button:hover{
+    box-shadow: 1px 0 1px;
+}
+.edit-button_2:hover{
+    box-shadow: 1px 0 1px;
+}
+
+#close:hover{
+  box-shadow: 1px 0 1px;  
+}
+
+.extra{
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #B5C7D3;
+    border-radius: 4px;
+}
+
+.edit-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    width: 40px;
+    height: 24px;
+    margin-right: 50px;
+    margin-top: 13px;
+    line-height: 24px;
+    border: 1px solid silver;
     border-radius: 2px;
     cursor: pointer;
 }
 
+.edit-button_2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    width: 40px;
+    height: 24px;
+    margin-right: 50px;
+    margin-top: 13px;
+    line-height: 24px;
+    border: 1px solid silver;
+    border-radius: 2px;
+    cursor: pointer; 
+    padding: 0;
+    text-align: center;
+}
+
+.item-inside{
+    display: flex;
+    justify-content: space-between;
+    max-height: 80px;
+}
+
+.text-inside{
+    width:350px;
+    margin: 0 auto;
+}
+
+.item-img{
+    position: absolute;
+    top: 4.5px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+
+.item-img:hover { 
+    /* opacity:0.70;  */
+    border: 1px solid black; 
+    box-shadow: 1px 0px 1px;
+}
+
 .item{
     /* our main div */
-    margin: 0;
+    position: relative;
+    margin-top: 5px;
     text-align: center;
     width: 100%;
     min-height: 50px;
@@ -177,11 +348,95 @@ body{
     cursor: pointer;
 }
 
-.item:nth-child(odd) {
-   /* background: #9da1aa; */
-   background: #edeef0;
+.checkbox-inisde{
+    width: 15px;
+    height: 15px;
 }
+
+
+.item:hover{
+    transform: scale(1.01);
+}
+
+.item:nth-child(odd) {
+    background: #B5C7D3;
+}
+
+.item:nth-child(even){
+    border: 0.5px solid silver;
+}
+
 .container_done .item:nth-child(odd) {
-   /* background: #9da1aa; */
-   background: #edeef0;
+   background: #B5C7D3;
+}
+
+@media( max-width: 400px ){
+    #text{
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid silver;
+        border-radius: 5px;
+        margin-top: 10px; 
+    }
+
+     #button{
+        width: 200px;
+        height: 34px;
+        border-radius: 5px;
+        border: 1px solid silver;
+        cursor: pointer;
+        margin-top: 5px; 
+    }
+
+     #form_wrapper{
+        line-height: 0px;
+        width: 250px;
+        height: 100px;
+        padding-left: 0px; 
+    }
+
+     #container{
+        width: 250px;
+    }
+
+     #inside{
+        line-height: 0px;
+        width: 260px;
+        height: 100px;
+        padding-left: 0px; 
+    }
+
+     #task{
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid silver;
+        border-radius: 5px;
+        margin-top: 10px; 
+    }
+
+     #add{
+        width: 200px;
+        height: 34px;
+        border-radius: 5px;
+        border: 1px solid silver;
+        cursor: pointer;
+        margin-top: 5px; 
+    }
+
+     #close{
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        padding: 0;
+        margin: 0px 2px;
+        top: 11.4px;
+    }
+
+    #popus{
+        width: 270px;
+    }
 }

@@ -5,14 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href='index.css' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body>
+    <div class='wrapper-left'>
+        <input class='show-form' type='button' value='show'>
+        <div class='form-wrapper'>
+            <form class='form'>
+                <img class='img' src='without-photo.jpg'><br>
+                <h2 class='user-name'></h2>
+                <input id='input-name' class='input-form' placeholder='Enter your name' type='text'><br>
+                <input id='file' class='input-form' type='file' onchange="previewFile()"><br>
+                <input id='accept' class='input-form' value='accept' type='button'><br>
+            </form>
+        </div>
+    </div>
     <div id='grey' style="display: none;"></div>
     <div id='popus' style="display: none;">
         <div id='inside'>
-            <input type='text' placeholder="Enter task" id='task'>
-            <button id='add'> click </button>
+            <div id='title'></div>
+            <input type='text' placeholder="Enter task" id='task'></input>
+            <input type='button' value='add' id='add'> </input>
             <button id='close' style="display: none;">X</button>
         </div>
         <div id='container_3'>
@@ -22,10 +36,11 @@
     </div>
     <div id='form_wrapper'>
         <input type='text' placeholder="Enter task title" id='text'>
-        <button id='button'> click </button>
+        <input type='button' value='create' id='button'></input>
     </div>
     <div id='container'></div>
+    <script src='form.js'></script>
     <script src='code.js'></script>
-    
+    <script src='inside.js'></script>   
 </body>
 </html>
